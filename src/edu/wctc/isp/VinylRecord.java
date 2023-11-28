@@ -4,7 +4,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class VinylRecord implements Product {
+public class VinylRecord implements Product, Album {
 
     private final int SECONDS_IN_MINUTE = 60;
     private final int SECONDS_IN_HOUR = SECONDS_IN_MINUTE * 60;
@@ -31,11 +31,6 @@ public class VinylRecord implements Product {
     }
 
     @Override
-    public String getAuthor() {
-        return "";
-    }
-
-    @Override
     public double getCost() {
         return cost;
     }
@@ -51,16 +46,6 @@ public class VinylRecord implements Product {
     @Override
     public String getFormattedReleaseDate() {
         return releaseDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
-    }
-
-    @Override
-    public String getISBN() {
-        return "";
-    }
-
-    @Override
-    public int getPages() {
-        return 0;
     }
 
     @Override
